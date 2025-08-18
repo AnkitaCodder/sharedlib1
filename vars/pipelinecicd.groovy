@@ -19,3 +19,10 @@ def testing(jobname)
 
 }
 
+def release(jobname,ip)
+{
+   sh " scp /var/lib/jenkins/workspace/${jobname}/practice.py ubuntu@${ip}:/home/ubuntu/testagain"
+}
+
+
+
