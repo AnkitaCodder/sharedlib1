@@ -8,3 +8,8 @@ def build()
   sh 'python3'
 }
 
+def deployment(jobname,ip)
+{
+   sh "/var/lib/jenkins/workspace/${jobname}/practice.py ubuntu@${ip}:/home/ubuntu/testagain/practice.py"
+}
+
