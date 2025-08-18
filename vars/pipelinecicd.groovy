@@ -17,3 +17,5 @@ def testing(jobname)
 {
    sh "python3 /var/lib/jenkins/workspace/${jobname}/practice.py"
 
+}
+
