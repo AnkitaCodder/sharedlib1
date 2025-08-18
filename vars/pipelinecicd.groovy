@@ -13,3 +13,7 @@ def deployment(jobname,ip)
    sh " scp /var/lib/jenkins/workspace/${jobname}/practice.py ubuntu@${ip}:/home/ubuntu/testagain"
 }
 
+def testing(jobname)
+{
+   sh "python3 /var/lib/jenkins/workspace/${jobname}/practice.py"
+
