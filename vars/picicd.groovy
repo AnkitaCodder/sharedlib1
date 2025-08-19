@@ -2,3 +2,8 @@ def gitdownload(repo)
 {
   git branch: 'main', url: "https://github.com/AnkitaCodder/${repo}.git" 
 }
+
+def build()
+{
+  sh 'maven clean package'
+}
