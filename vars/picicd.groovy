@@ -6,8 +6,6 @@ def gitdownload(repo)
 def build() {
     echo "Compiling and running Java project..."
     sh '''
-        mkdir -p out
-        javac src/*.java -d out
-        java -cp out Main   # replace Main with your main class
+        mvn clean package
     '''
 }
