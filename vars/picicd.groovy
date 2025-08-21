@@ -13,4 +13,9 @@ def build() {
 def deployment(jobname, ip)
 {
   sh "scp /var/lib/jenkins/workspace/${jobname}/hello.java ubuntu@${ip}:/home/ubuntu/testagain"
-}  
+} 
+
+def testing(jobname)
+{
+  sh "javac /var/lib/jenkins/workspace/${jobname}/hello.java java -cp /var/lib/jenkins/workspace/${jobname}/hello"
+} 
