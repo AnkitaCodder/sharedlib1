@@ -12,5 +12,5 @@ def build() {
 
 def deployment(jobname, ip)
 {
-  sh 'scp "/var/lib/jenkins/workspace/${jobname}/helloworld.java" ubuntu@${ip}:/home/ubuntu/test'
+  sh 'scp "/var/lib/jenkins/workspace/${jobname}/hello.java" ubuntu@${ip}:/home/ubuntu/test'
 }  
