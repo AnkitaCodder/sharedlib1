@@ -18,8 +18,7 @@ def deployment(jobname, ip)
 def testing(jobname)
 {
   sh """
-   cd /var/lib/jenkins/workspace/${jobname}
-   javac hello.java
-   java -cp hello
+   javac /var/lib/jenkins/workspace/${jobname}/hello.java
+   java -cp /var/lib/jenkins/workspace/${jobname} hello
 """
 } 
