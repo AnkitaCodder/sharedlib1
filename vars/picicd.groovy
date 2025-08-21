@@ -19,7 +19,7 @@ def testing(jobname)
 {
   sh """
    cd /var/lib/jenkins/workspace/${jobname}
-   javac HelloWorld.java
-   java HelloWorld
+   javac hello.java
+   java -cp hello
 """
 } 
